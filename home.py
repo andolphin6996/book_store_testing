@@ -1,0 +1,23 @@
+import time
+from selenium import webdriver
+time.sleep(2)
+driver = webdriver.Chrome()
+driver.maximize_window()
+driver.get("https://practice.automationtesting.in/")
+driver.execute_script("window.scrollBy(0, 600);")
+ruby = driver.find_element_by_xpath("//*[@id='text-22-sub_row_1-0-2-0-0']/div/ul/li/a[1]")
+ruby.click()
+btn1 = driver.find_element_by_xpath("//*[@id='product-160']/div[3]/ul/li[2]/a")
+btn1.click()
+star5 = driver.find_element_by_class_name("star-5")
+star5.click()
+comment = driver.find_element_by_id("comment")
+comment.send_keys("Nice book!")
+name = driver.find_element_by_id("author")
+name.send_keys("Ann")
+email_btn = driver.find_element_by_id("email")
+email_btn.send_keys("test@mail.ru")
+submit_btn = driver.find_element_by_id("submit")
+submit_btn.click()
+driver.quit()
+
