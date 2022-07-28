@@ -12,6 +12,7 @@
 # password.send_keys("123456Sa#$%666")
 # reg = driver.find_element_by_name("register")
 # reg.click()
+# driver.quite()
 
 #2login
 
@@ -34,5 +35,5 @@
 # log.click()
 # element_log = WebDriverWait(driver, 10).until(
 #     EC.text_to_be_present_in_element((By.LINK_TEXT, "Logout"), "Logout"))
-# print(element_log)
+# driver.quite()
 
